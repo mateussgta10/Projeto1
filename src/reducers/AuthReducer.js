@@ -1,5 +1,5 @@
 const initialState = {
-    email:'mateussgta10@gmail.com',
+    email:'exemplo@gmail.com',
     senha:'123456'
 };
 
@@ -7,7 +7,7 @@ const AuthReducer = (state = [], action)=>{
     if(state.length ==0) {
         return initialState;
     }
-    
+
 
     return state;
 };
