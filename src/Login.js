@@ -4,6 +4,16 @@ import { StyleSheet, Text, View,TextInput,Button} from 'react-native';
 import {connect} from 'react-redux';
 
 export class Login extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+
+    }
+    this.login = this.login.bind(this);
+  }
+  login(){
+    this.props.navigation.navigate('HomePrincipal');
+  }
   render() {
     return (
       <View style={styles.container}>

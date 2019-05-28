@@ -8,6 +8,7 @@ import Reducers from './src/Reducers';
 import Home from './src/Home';
 import Login from './src/Login';
 import Cadastro from './src/Cadastro';
+import HomePrincipal from './src/Telas/HomePrincipal';
 
 let store = createStore(Reducers);
 
@@ -20,8 +21,13 @@ const ReactNavegador = createStackNavigator({
   },
   Login:{
     screen:Login
+  },
+  HomePrincipal:{
+    screen:HomePrincipal
   }
+
 });
+
 
 const AppContainer = createAppContainer(ReactNavegador);
 export default class App extends Component {

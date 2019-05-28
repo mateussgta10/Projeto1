@@ -1,7 +1,18 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View,TextInput,Button} from 'react-native';
 import {connect} from 'react-redux';
+
 export class Cadastro extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+
+    }
+    this.cadastro = this.cadastro.bind(this);
+  }
+  cadastro(){
+    this.props.navigation.navigate('HomePrincipal');
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -10,7 +21,7 @@ export class Cadastro extends Component {
        
         <Text style={styles.welcome}>Senha</Text>
         <TextInput value={this.props.senha} secureTextEntry={true} style={styles.email}/>    
-        <Button title='Cadastrar' onPress={this.login}/>
+        <Button title='Cadastrar' onPress={this.cadastro}/>
 
 
       </View>
